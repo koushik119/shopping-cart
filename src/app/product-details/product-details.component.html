@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container mt-3 pt-3">
+    <h3>Device Details</h3>
+    <hr />
+        <p class="lead"><strong>View the product details here.</strong></p>
+    <div class="container pt-1 mt-lg-3" id="about">
+            <div class="row">
+              <div class="col-lg-6 mb-2">
+                <img src="{{product.image}}" width="100%" alt=""> 
+              </div>
+              <div class="col-lg-6 mb-2 flex-column d-flex justify-content-center align-items-flex-start" style="height: 400px;">
+                <h1 class="name mb-4 mt-5"><span style="color:black ;">{{product.productName}}</span></h1>
+                <p>{{product.description}}</p>
+                <h6 class="price mt-1 mb-4">Price: {{product.price}}</h6>
+                <div class="border-2">            
+                <!-- <a class="btn btn-lg btn-outline-dark px-4" ><i class="fa fa-shopping-cart"> </i> Add to Cart</a> -->
+                <button class="btn btn-primary" (click)=addtocart(product)>Add to cart</button>
+
+
+            </div>
+              </div>
+            </div>
+        </div>
+    </div>
