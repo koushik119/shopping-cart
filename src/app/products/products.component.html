@@ -1,0 +1,46 @@
+<div>
+    <app-header></app-header>
+</div>
+<div class="card-top container-fluid">
+    <div class="container-fluid " style=" display: flex; align-self: center;">
+        <div class="item" >
+            <a (click)="filter('')">
+                <img style="width: 75px; margin-top: 10px;height: 52px;" src="https://5.imimg.com/data5/QF/BQ/PC/SELLER-12401399/online-shopping-system-250x250.jpg" alt="">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('electronics')">
+                <img style="width: 75px; margin-top: 10px;height: 52px;" src="https://media.istockphoto.com/id/178716575/photo/mobile-devices.jpg?s=612x612&w=0&k=20&c=9YyINgAbcmjfY_HZe-i8FrLUS43-qZh6Sx6raIc_9vQ=" alt="">
+                <h6>Electronics</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fashion')">
+                <img style="width: 75px; margin-top: 10px;height: 52px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFDbW2M8VTySowI0MWnL4no3ZOMJbCDqhRg&usqp=CAU" alt="">
+                <h6>Fashion</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('jewelery')">
+                <img style="width: 75px; margin-top: 10px;height: 52px;" src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/e8e7a131-a1ff-4f25-b4cf-208bdea4cfe0/images%252FEar-ring-bangle.png?MOD=AJPERES&CVID=" alt="">
+                <h6 >Jewllery</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> ₹{{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

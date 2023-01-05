@@ -8,12 +8,20 @@ import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { CartComponent } from './cart/cart.component';
+import { ProductsComponent } from './products/products.component';
+import { FilterPipe } from './filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    CartComponent,
+    ProductsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

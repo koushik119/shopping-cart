@@ -60,7 +60,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('appUser', this.loggedInData.userName);
             this.loginForm.reset();
             console.log('login', localStorage.getItem('appUser'));
-            this.router.navigate(['home']);
+            this.router.navigate(['products']);
           }
         }
         else {
