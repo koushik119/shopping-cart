@@ -1,3 +1,4 @@
+<app-header></app-header>
 <ng-container *ngIf="products.length !=0">
     <div class="container">
         <div class="card-table">
@@ -10,7 +11,7 @@
                             <th>Product Image</th>
                             <th>Description</th>
                             <th>Price</th>
-                            <th>Quantity</th>
+                            <!-- <th>Quantity</th>  -->
                             <th>Total</th>
                             <th>Action</th>
                         </tr>
@@ -22,8 +23,8 @@
                             <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
                             <td style="width: 25%;">{{item.description}}</td>
                             <th style="width: 12%;">{{item.price}}</th>
-                            <td style="width: 12%;">{{item.quantity}}</td>
-                            <td style="width: 12%;">{{item.total}}</td>
+                            <!-- <td style="width: 12%;">{{item.quantity}}</td> -->
+                            <td style="width: 12%;">{{item.price}}</td>
                             <td>
                                 <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                             </td>
@@ -33,7 +34,7 @@
                             <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
                             <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
                             <td><button class="btn btn-success">Checkout</button></td>
-                            <td><strong>Grand Total : {{grandTotal}}</strong></td>
+                            <td><strong>Grand Total : ${{grandTotal}}</strong></td>
                         </tr>
                     </tbody>
                 </table>
