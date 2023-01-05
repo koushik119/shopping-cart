@@ -1,0 +1,36 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="pannel1 offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3 " style="border-radius: 1px;
+            margin-top: 100px;">
+                <div class="pannel border bg-white">
+                    <div class="panel-heading text-center">
+                        <h3 class="pt-3 font-weight-bold">Login</h3>
+                    </div>
+                    <div class="pannel-body p-3">
+                        <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" id="field" formControlName="userName" placeholder="username">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input type="password" id="field" formControlName="password" placeholder="password">
+                                </div>
+                            </div>
+                            <div class="form-inlinefr mt-4">
+                                <a href="" id="forget" class="font-weight-bold">Forget Password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mt-4 w-100">Login</button>
+                            <div class="text-center pt-4 text-muted">Don't have an account? <a href="" id="forget" routerLink="/signup">Sign Up</a></div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
